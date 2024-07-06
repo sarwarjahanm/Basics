@@ -1,0 +1,52 @@
+<!doctype html> 
+<html>
+
+<script>
+function validateForm(){
+var fname = document.insertf.fname.value;
+var lname = document.insertf.lname.value;
+var address = document.getElementById("address").value;
+var phone = document.getElementById("phone").value;
+
+let check = phone.match(/^\d{10}$/);  		//check whether entered phone# is a valid 10 digit number, returns null if invalid value
+let check2 = fname.match(/^[a-zA-Z]+$/);	//check whether Firsname contans alphabets only, returns null if invalid value
+let check3 = lname.match(/^[a-zA-Z]+$/);	//check whether Firsname contans alphabets only, returns null if invalid value
+
+
+if (phone == "" || fname == "" || lname == "" || address == "") {
+	alert("All inputs must be filled!");
+	return false;
+}
+else if(check == null){	
+alert("Phone Number must be a 10 digit number only!");
+	return false;
+}
+else if(check2 == null || check3 == null){	
+alert("Name Fileds value must be Alphabets only!");
+	return false;
+}
+else if(address == "'"){					//If address contains ' character, this will break the backend database query
+alert("Address contains invalid characters!");
+	return false;
+}
+
+}
+</script>
+
+<body>
+<div style="text-align:center;">
+<h2 >This is a basic HTML page for inserting data!</h2><br/><br/>
+</div>
+<form id="insertf" name="insertf" action="Insert.php?from=withJS" method="post" onsubmit="return validateForm()"> 
+	<div style="text-align:center;">
+		FName   <input type="text" name="fname" id="fname" maxlength=20/><br/><br/>
+		LName   <input type="text" name="lname" id="lname" maxlength=20/><br/><br/>
+		Address <input type="text" name="address" id="address" maxlength=20/><br/><br/>
+		Phone # <input type="text" name="phone" id="phone" maxlength=20/><br/><br/>
+			    <input type="submit" id="insert" value="Insert and Show All Data"/>
+	</div> 	 
+</form> 
+
+</body>
+
+</html>
