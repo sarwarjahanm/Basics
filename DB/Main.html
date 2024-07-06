@@ -1,0 +1,30 @@
+<!doctype html> 
+<html>
+<script>
+function insert() {
+  location.replace("http://localhost:81/Basics/DB/insertData.html")
+}
+function allData() {
+  location.replace("http://localhost:81/Basics/DB/allData.php")
+}
+function search() {
+  location.replace("http://localhost:81/Basics/DB/searchData.php")
+}
+function update() {
+  location.replace("http://localhost:81/Basics/DB/updateData.php")
+}
+function remove() {
+  location.replace("http://localhost:81/Basics/DB/deleteData.php")
+}
+</script>
+
+<body>
+<div style="text-align:center;">
+<h2>This HTML page is meant for Demonstrating Basic Database Operations!</h2><br/><br/><br/><br/>
+<p>Click any of the following buttons to perform the desired operation.</p><br/>
+<pre><button onclick="insert()">Insert Data</button>  <button onclick="allData()">Show All Data</button>  <button onclick="search()">Search Data</button>  <button onclick="update()">Update Data</button>  <button onclick="remove()">Delete Data</button></pre>
+</div>
+
+</body>
+
+</html>
