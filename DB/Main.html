@@ -1,5 +1,9 @@
 <!doctype html> 
 <html>
+<title>Main</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
 <script>
 function insert() {
   location.replace("http://localhost:81/Basics/DB/insertData.html")
@@ -18,10 +22,11 @@ function remove() {
 }
 </script>
 
-<body>
+<body style="background-image: url(http://localhost:81/Basics/DB/img/search.png); background-position: center">
 <div style="text-align:center;">
-<h2>This HTML page is meant for Demonstrating Basic Database Operations!</h2><br/><br/><br/><br/>
-<p>Click any of the following buttons to perform the desired operation.</p><br/>
+<img src="Logo.png" height=150 width=150/>
+<h2 style="color:white;">This HTML page is meant for Demonstrating Basic Database Operations!</h2><br/>
+<p style="color:white;">Click any of the following buttons to perform the desired operation.</p>
 <pre><button onclick="insert()">Insert Data</button>  <button onclick="allData()">Show All Data</button>  <button onclick="search()">Search Data</button>  <button onclick="update()">Update Data</button>  <button onclick="remove()">Delete Data</button></pre>
 </div>
 

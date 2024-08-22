@@ -9,6 +9,10 @@
 <!doctype html> 
 	
 <html> 
+<head>
+<title>Search Data</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 
 <script>
@@ -17,9 +21,10 @@ function mainpage() {
 }
 </script>
 
-<body> <button onclick="mainpage()">Main Page</button><br/>
+<body style="background-image: url(http://localhost:81/Basics/DB/img/db.png); background-position: center"> <button onclick="mainpage()">Main Page</button><br/>
 	
 <div style="text-align:center;"> 
+<img src="Logo.png" height=150 width=150/>
 <h2>Search User Details</h2>
 <?php 
 	

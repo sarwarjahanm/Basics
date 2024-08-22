@@ -1,5 +1,9 @@
 
 <!doctype html> 
+<head>
+<title>Insert Data</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 <?php 
 	 
@@ -50,10 +54,10 @@ function mainpage() {
 }
 </script>
 	
-<body> <button onclick="mainpage()">Main Page</button><br/><br/>
+<body style="background-image: url(http://localhost:81/Basics/DB/img/insert.png); background-position: center"> <button onclick="mainpage()">Main Page</button><br/><br/>
 
 <div style="text-align:center;">
-
+<img src="Logo.png" height=150 width=150/>
 	<h2>Data Insertion Successful. Below are all data:</h2><br/>
 	
 <?php 
