@@ -1,0 +1,106 @@
+<!doctype html> 
+<html>
+<title>DOM JS</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  background-image: url('default.png');
+  background-size: contain;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+</style>
+</head>
+
+<script>
+function showPreview(){
+document.getElementById('recipient').innerHTML = document.getElementById('to').value+',';
+document.getElementById('sender').innerHTML = document.getElementById('from').value+'.';
+
+var msg = document.getElementById('message').value;
+
+switch(msg){
+case 'newy': 
+		document.getElementById('messg').innerText = 'Happy New Year! May the coming year be a canvas of beautiful moments, a tapestry of successful endeavors, and a palette of vibrant experiences. Here is to filling each day with positivity and gratitude.';
+		break;
+case 'birthday': 
+		document.getElementById('messg').innerText = 'A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always.'+'\n'+'Happy birthday!';
+		break;
+}
+
+var bg = document.getElementById('background').value;
+
+switch(bg){
+case 'gift': 
+		document.getElementById('card1').style.backgroundImage = "url(gift.png)";
+		break;
+case 'flower': 
+		document.getElementById('card1').style.backgroundImage = "url(flower.png)";
+		break;
+} 
+}
+</script>
+
+<body>
+<h2 style="text-align:center;">Design a Greeting Card</h2><br/><br/>
+
+<div class="row" style="text-align:center;">
+  <div class="column">
+    <h2>Details</h2>
+	<pre>Recipient <input type="text" id="to"/></pre>
+	<pre>Sender    <input type="text" id="from"/></pre>
+    <pre>Message         <select id="message"><option value="newy">New Year Greetings</option><option value="birthday">Happy Birthday</option></select></pre>
+	<pre>Background             <select id="background"><option value="gift">Gift Box</option><option value="flower">Flower</option></select></pre>
+	<br/>  
+	<button onclick="showPreview()">Show Preview</button> 
+	
+  </div>
+  <div class="column">
+    <h2>Preview</h2>
+    <div class="card" id="card1">
+		<div class="container">
+			<br/>
+			Hi <a id='recipient'>[Recipient],</a><br/><br/>
+			<a id='messg'>This is a Sample Message.</a>
+			
+			<br/><br/><br/><br/>
+			From <a id='sender'>[Sender],</a>
+		</div>
+	</div>
+  </div>
+</div>
+
+</body>
+
+</html>

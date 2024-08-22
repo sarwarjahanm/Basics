@@ -1,10 +1,10 @@
 <?php 
 
 	$servername = "localhost"; 
-	$username = "infoSecCamp"; 
-	$password = "infoSecCamp"; 
+	$username = "root"; 
+	$password = ""; 
 
-	$database = "infoSecCamp"; 
+	$database = "basics"; 
  
 	$conn = mysqli_connect($servername, 
 		$username, $password, $database); 

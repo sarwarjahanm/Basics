@@ -1,5 +1,8 @@
 
 <!doctype html> 
+<title>Insert Data</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 <?php 
 	 

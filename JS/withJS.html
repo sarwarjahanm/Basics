@@ -1,5 +1,8 @@
 <!doctype html> 
 <html>
+<title>HTML withJS</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 <script>
 function validateForm(){
@@ -33,12 +36,12 @@ alert("Address contains invalid characters!");
 }
 </script>
 
-<body>
+<body style="background-image: url(http://localhost:81/Basics/JS/img/search.png); background-position: center">
 <div style="text-align:center;">
-<h2 >This is a basic HTML page for inserting data!</h2><br/><br/>
+<h2 style="color:white;">This is a basic HTML page for inserting data!</h2><br/><br/><br/>
 </div>
 <form id="insertf" name="insertf" action="Insert.php?from=withJS" method="post" onsubmit="return validateForm()"> 
-	<div style="text-align:center;">
+	<div style="text-align:center;color:white;">
 		FName   <input type="text" name="fname" id="fname" maxlength=20/><br/><br/>
 		LName   <input type="text" name="lname" id="lname" maxlength=20/><br/><br/>
 		Address <input type="text" name="address" id="address" maxlength=20/><br/><br/>
