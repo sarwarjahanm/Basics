@@ -1,0 +1,45 @@
+<!doctype html> 
+<html>
+<title>Main</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<script>
+function plaintext() {
+  location.replace("http://localhost:81/Basics/cryptography/Plaintext.html")
+}
+function aes() {
+  location.replace("http://localhost:81/Basics/cryptography/AES.html")
+}
+function des() {
+  location.replace("http://localhost:81/Basics/cryptography/DES.html")
+}
+function md5() {
+  location.replace("http://localhost:81/Basics/cryptography/MD5.html")
+}
+function sha1() {
+  location.replace("http://localhost:81/Basics/cryptography/SHA1.html")
+}
+function sha512() {
+  location.replace("http://localhost:81/Basics/cryptography/SHA512.html")
+}
+function sha512Salt() {
+  location.replace("http://localhost:81/Basics/cryptography/SHA512Salt.html")
+}
+</script>
+
+<body style="background-image: url(http://localhost:81/Basics/cryptography/img/search.png); background-position: center">
+<div style="text-align:center;">
+<img src="Logo.png" height=150 width=150/>
+<h2 style="color:white;">This HTML page is meant for Demonstrating Cryptography</h2><br/>
+<p style="color:white;">Click any of the following buttons to perform the desired operation.</p>
+<pre><button onclick="plaintext()">Plaintext</button>  
+
+<b style="color:white;">Encryption:</b> <button onclick="aes()">AES</button>
+
+<b style="color:white;">Hashing:</b> <button onclick="md5()">MD5</button>  <button onclick="sha1()">SHA1</button>  <button onclick="sha512()">SHA512</button>  <button onclick="sha512Salt()">SHA512 with SALT</button></pre>
+</div>
+
+</body>
+
+</html>

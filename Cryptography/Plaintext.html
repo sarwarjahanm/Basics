@@ -1,0 +1,49 @@
+<!doctype html> 
+<html>
+<title>PlainTEXT</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<script>
+function mainpage() {
+  location.replace("http://localhost:81/Basics/cryptography/Main.html")
+}
+function validateForm(){
+var username = document.insertf.username.value;
+var password = document.getElementById("password").value;
+
+let check2 = username.match(/^[a-zA-Z0-9]+$/);	//check whether Firsname contans alphabets only, returns null if invalid value
+
+
+if (username == "" || password == "") {
+	alert("All inputs must be filled!");
+	return false;
+}
+
+else if(check2 == null || check3 == null){	
+alert("Username value must be Alphanumeric only!");
+	return false;
+}
+else if(password == "'"){					//If password contains ' character, this will break the backend database query
+alert("password contains invalid characters!");
+	return false;
+}
+
+}
+</script>
+
+<body style="background-image: url(http://localhost:81/Basics/JS/img/search.png); background-position: center"> <button onclick="mainpage()">Main Page</button><br/><br/>
+<div style="text-align:center;">
+<h2 style="color:white;">Storing Password in Plaintext</h2><br/><br/><br/>
+</div>
+<form id="insertf" name="insertf" action="Plaintext.php?from=withJS" method="post" onsubmit="return validateForm()"> 
+	<div style="text-align:center;color:white;">
+		username   <input type="text" name="username" id="username" maxlength=20/><br/><br/>
+		password <input type="text" name="password" id="password" maxlength=20/><br/><br/>
+			    <input type="submit" id="insert" value="Insert and Show All Data"/>
+	</div> 	 
+</form> 
+
+</body>
+
+</html>
