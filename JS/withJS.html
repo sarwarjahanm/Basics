@@ -5,6 +5,9 @@
 </head>
 
 <script>
+function mainpage() {
+  location.replace("http://localhost:81/Basics/JS/Main.html")
+}
 function validateForm(){
 var fname = document.insertf.fname.value;
 var lname = document.insertf.lname.value;
@@ -36,7 +39,7 @@ alert("Address contains invalid characters!");
 }
 </script>
 
-<body style="background-image: url(http://localhost:81/Basics/JS/img/search.png); background-position: center">
+<body style="background-image: url(http://localhost:81/Basics/JS/img/search.png); background-position: center"><button onclick="mainpage()">JavaScript Main Page</button><br/>
 <div style="text-align:center;">
 <h2 style="color:white;">This is a basic HTML page for inserting data!</h2><br/><br/><br/>
 </div>

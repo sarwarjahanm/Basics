@@ -44,6 +44,9 @@
 </head>
 
 <script>
+function mainpage() {
+  location.replace("http://localhost:81/Basics/JS/Main.html")
+}
 function showPreview(){
 document.getElementById('recipient').innerHTML = document.getElementById('to').value+',';
 document.getElementById('sender').innerHTML = document.getElementById('from').value+'.';
@@ -72,7 +75,7 @@ case 'flower':
 }
 </script>
 
-<body>
+<body><button onclick="mainpage()">JavaScript Main Page</button><br/>
 <h2 style="text-align:center;">Design a Greeting Card</h2><br/><br/>
 
 <div class="row" style="text-align:center;">
